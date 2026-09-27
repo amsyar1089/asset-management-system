@@ -1,0 +1,84 @@
+.log-table td { vertical-align: middle; }
+
+.log-time {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.log-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+.log-created  { background: rgba(16,185,129,0.15);  color: #10b981; }
+.log-updated  { background: rgba(245,158,11,0.15);  color: #f59e0b; }
+.log-deleted  { background: rgba(239,68,68,0.15);   color: #ef4444; }
+.log-imported { background: rgba(99,102,241,0.15);  color: #818cf8; }
+
+.log-user {
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+.log-role {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.log-details {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  max-width: 280px;
+  word-break: break-word;
+}
+
+/* ── Custom Type Input ── */
+.type-add-row {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-top: 6px;
+}
+.type-add-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1.5px solid #ce182a;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-family: inherit;
+  outline: none;
+  background: var(--bg-input);
+  color: var(--text-primary);
+}
+.type-add-btn {
+  padding: 8px 14px;
+  background: #ce182a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+.type-add-btn:hover { background: #a5121f; }
+.type-cancel-btn {
+  padding: 8px 10px;
+  background: var(--bg-table-header);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s;
+}
+.type-cancel-btn:hover { background: var(--bg-table-hover); }

@@ -1,0 +1,136 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+/* ── Light Mode (default) ── */
+:root {
+  --bg-main:          #f0f2f5;
+  --bg-card:          #ffffff;
+  --bg-input:         #fafafa;
+  --bg-table-header:  #f8f8f8;
+  --bg-table-hover:   #fafafa;
+  --bg-topbar:        #ffffff;
+  --bg-filter:        #ffffff;
+  --bg-modal:         #ffffff;
+  --bg-form-actions:  #fafafa;
+
+  --text-primary:     #111111;
+  --text-secondary:   #555555;
+  --text-muted:       #888888;
+  --text-label:       #555555;
+
+  --border:           #e5e7eb;
+  --border-light:     #f5f5f5;
+  --border-table:     #eeeeee;
+
+  --shadow-card:      0 1px 4px rgba(0,0,0,0.06);
+  --shadow-hover:     0 4px 16px rgba(0,0,0,0.10);
+  --shadow-modal:     0 20px 60px rgba(0,0,0,0.20);
+
+  --badge-ok-bg:      #d1fae5;
+  --badge-ok-text:    #065f46;
+  --badge-miss-bg:    #fee2e2;
+  --badge-miss-text:  #991b1b;
+  --badge-maint-bg:   #fef3c7;
+  --badge-maint-text: #92400e;
+  --badge-disp-bg:    #f3f4f6;
+  --badge-disp-text:  #374151;
+  --badge-fault-bg:   #fce7f3;
+  --badge-fault-text: #9d174d;
+  --badge-belum-bg:   #ede9fe;
+  --badge-belum-text: #5b21b6;
+
+  --type-pill-bg:     #eff6ff;
+  --type-pill-text:   #1d4ed8;
+
+  --scrollbar-thumb:  #d1d5db;
+  --scrollbar-track:  #f9fafb;
+}
+
+/* ── Dark Mode ── */
+[data-theme="dark"] {
+  --bg-main:          #0d0d1a;
+  --bg-card:          #16162a;
+  --bg-input:         #0f0f20;
+  --bg-table-header:  #111124;
+  --bg-table-hover:   #1c1c34;
+  --bg-topbar:        #11111f;
+  --bg-filter:        #0f0f20;
+  --bg-modal:         #16162a;
+  --bg-form-actions:  #111124;
+
+  --text-primary:     #e8e8f5;
+  --text-secondary:   #9999bb;
+  --text-muted:       #6666aa;
+  --text-label:       #8888aa;
+
+  --border:           #2a2a4a;
+  --border-light:     #1e1e38;
+  --border-table:     #1e1e38;
+
+  --shadow-card:      0 1px 6px rgba(0,0,0,0.40);
+  --shadow-hover:     0 4px 20px rgba(0,0,0,0.50);
+  --shadow-modal:     0 20px 60px rgba(0,0,0,0.60);
+
+  --badge-ok-bg:      rgba(6,95,70,0.25);
+  --badge-ok-text:    #34d399;
+  --badge-miss-bg:    rgba(153,27,27,0.25);
+  --badge-miss-text:  #f87171;
+  --badge-maint-bg:   rgba(146,64,14,0.25);
+  --badge-maint-text: #fbbf24;
+  --badge-disp-bg:    rgba(55,65,81,0.30);
+  --badge-disp-text:  #9ca3af;
+  --badge-fault-bg:   rgba(157,23,77,0.25);
+  --badge-fault-text: #f472b6;
+  --badge-belum-bg:   rgba(91,33,182,0.25);
+  --badge-belum-text: #a78bfa;
+
+  --type-pill-bg:     rgba(29,78,216,0.20);
+  --type-pill-text:   #93c5fd;
+
+  --scrollbar-thumb:  #3a3a5c;
+  --scrollbar-track:  #0d0d1a;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar       { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--scrollbar-track); }
+::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 3px; }
+
+body {
+  font-family: 'Source Sans 3', 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+  color: var(--text-primary);
+  transition: background 0.2s, color 0.2s;
+}
+
+/* Login page centering */
+body:has(.login-wrapper) {
+  background-color: #fdf5f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+[data-theme="dark"] body:has(.login-wrapper) {
+  background-color: #0d0d1a;
+}
+
+/* App shell takes full height */
+body:has(.app-shell) {
+  background: var(--bg-main);
+  overflow: hidden;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,124 @@
+/* Shared page styles */
+.page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+.page-title { font-size: 1.6rem; font-weight: 700; color: var(--text-primary); margin: 0 0 4px; }
+.page-sub   { font-size: 0.85rem; color: var(--text-muted); margin: 0; }
+
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 10px 20px;
+  background: #ce182a; color: #fff;
+  border: none; border-radius: 10px;
+  font-size: 0.9rem; font-weight: 600; cursor: pointer;
+  text-decoration: none; white-space: nowrap;
+  transition: background 0.2s, transform 0.1s;
+}
+.btn-primary:hover  { background: #a5121f; }
+.btn-primary:active { transform: scale(0.98); }
+.btn-primary:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.btn-secondary {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 10px 18px;
+  background: var(--bg-card); color: var(--text-primary);
+  border: 1.5px solid var(--border); border-radius: 10px;
+  font-size: 0.9rem; font-weight: 600; cursor: pointer;
+  text-decoration: none; font-family: inherit;
+  transition: border-color 0.2s, background 0.2s, color 0.2s;
+}
+.btn-secondary:hover { border-color: #ce182a; color: #ce182a; }
+
+/* ── Stat Cards ── */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.stat-card {
+  background: var(--bg-card);
+  border-radius: 14px;
+  padding: 20px 18px;
+  box-shadow: var(--shadow-card);
+  border-left: 4px solid var(--accent);
+  transition: box-shadow 0.2s, transform 0.2s, background 0.2s;
+}
+.stat-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-2px); }
+.stat-icon  { font-size: 1.6rem; margin-bottom: 10px; }
+.stat-value { font-size: 2rem; font-weight: 800; color: var(--text-primary); line-height: 1; }
+.stat-label { font-size: 0.78rem; color: var(--text-muted); margin-top: 4px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; }
+
+/* ── Dash Grid ── */
+.dash-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.dash-card {
+  background: var(--bg-card);
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: var(--shadow-card);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.card-title { font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin: 0 0 16px; }
+
+/* ── Bar List ── */
+.bar-list { display: flex; flex-direction: column; gap: 10px; }
+.bar-row  { display: flex; align-items: center; gap: 10px; }
+.bar-label { font-size: 0.8rem; color: var(--text-secondary); width: 160px; flex-shrink: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bar-track { flex: 1; height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; }
+.bar-fill  { height: 100%; background: #ce182a; border-radius: 4px; transition: width 0.4s ease; }
+.bar-count { font-size: 0.8rem; font-weight: 700; color: var(--text-primary); width: 30px; text-align: right; flex-shrink: 0; }
+
+/* ── Recent Table ── */
+.recent-table-wrap { overflow-x: auto; }
+.recent-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+.recent-table th {
+  background: var(--bg-table-header);
+  padding: 10px 12px;
+  text-align: left;
+  font-size: 0.75rem; font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase; letter-spacing: 0.04em;
+  border-bottom: 1px solid var(--border-table);
+  transition: background 0.2s;
+}
+.recent-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border-light);
+  color: var(--text-primary);
+  transition: background 0.2s;
+}
+.recent-table tr:last-child td { border-bottom: none; }
+.recent-table tr:hover td { background: var(--bg-table-hover); }
+
+/* ── Badges ── */
+.badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; }
+.badge-ok                { background: var(--badge-ok-bg);    color: var(--badge-ok-text); }
+.badge-missing           { background: var(--badge-miss-bg);  color: var(--badge-miss-text); }
+.badge-under-maintenance { background: var(--badge-maint-bg); color: var(--badge-maint-text); }
+.badge-disposed          { background: var(--badge-disp-bg);  color: var(--badge-disp-text); }
+.badge-faulty            { background: var(--badge-fault-bg); color: var(--badge-fault-text); }
+.badge-belum-sign        { background: var(--badge-belum-bg); color: var(--badge-belum-text); }
+/* also: badge-active / badge-inactive for Users page */
+.badge-active   { background: var(--badge-ok-bg);   color: var(--badge-ok-text); }
+.badge-inactive { background: var(--badge-disp-bg); color: var(--badge-disp-text); }
+
+.link-more { font-size: 0.82rem; color: #ce182a; text-decoration: none; font-weight: 600; }
+.link-more:hover { text-decoration: underline; }
+.link-cell { color: #ce182a; text-decoration: none; font-weight: 600; }
+.link-cell:hover { text-decoration: underline; }
+.loading-state { text-align: center; padding: 80px; color: var(--text-muted); font-size: 1rem; }
+
+@media (max-width: 768px) {
+  .dash-grid  { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .bar-label  { width: 100px; }
+}
